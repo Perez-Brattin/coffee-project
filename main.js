@@ -41,16 +41,13 @@
     function updateCoffees(e) {
         e.preventDefault(); // don't submit the form, we just want to update the data
         let selectedRoast = roastSelection.value;
-        let filteredCoffees;
-        if (selectedRoast === "all") {
-            filteredCoffees = coffees;
-        } else {
-            filteredCoffees = coffees.filter((coffee) => {
-                return coffee.roast === selectedRoast
-            });
-        }
+        let filteredCoffees = (selectedRoast === "all") ? coffees : coffees.filter((coffee) => {
+            return coffee.roast === selectedRoast
+        });
+
         coffeeDiv.innerHTML = renderCoffees(filteredCoffees);
     }
+
 
     function filterByName(value) {
         return coffees.filter(({ name }) => name.toLowerCase().startsWith(value))

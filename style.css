@@ -11,6 +11,55 @@ body {
     margin: 0;
     padding: 0;
 }
+.main-header {
+    background-image:url(../img/coffee.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0 -200px;
+    height: 15em;
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+}
+.title-card {
+    grid-column: 2/3;
+    grid-row: 2/4;
+    text-align: center;
+}
+.title-card h1 {
+    font-weight: 500;
+    font-size: 2.5em;
+}
+
+.title-card p,
+.title-card h1 {
+    margin: 0;
+    color: black;
+}
+.main-nav{
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    grid-column: 1/5;
+    grid-row: 5/6;
+}
+.main-nav ul{
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    list-style: none;
+}
+
+li a {
+    display: inline-block;
+    padding: 1em 2em;
+    color: white;
+    text-decoration: none;
+}
 
 .form-header {
     margin: 0; 

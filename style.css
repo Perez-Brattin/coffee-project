@@ -12,7 +12,6 @@ body {
     padding: 0;
 }
 .main-header {
-    background-image:url(../img/coffee.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 0 -200px;
@@ -103,4 +102,11 @@ select {
     cursor: pointer;
     text-align: center;
     padding: 0 1em
+}
+
+/*video Css*/
+
+#videobg {
+    background: url(video/pour.mp4) no-repeat;
+    background-size: cover;
 }

@@ -1,46 +1,57 @@
 html {
     box-sizing: border-box;
 }
-*,*::before,*::after {
+*, *::before, *::after {
     box-sizing: inherit;
 }
 
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
-}
-
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
-}
-
 body {
-    /*background-image: url("images/beans.jpeg");*/
+    /* background-image: url("images/beans.jpeg"); */
+    
+    margin: 0;
+    padding: 0;
+}
+
+.form-header {
+    margin: 0; 
+    padding: 0;
+}
+.main-wrapper {
     display: flex;
     flex-direction: column;
-}
 
-.form-wrapper {
-    margin: 5em auto;
+}
+.field-container {
     display: flex;
+    margin: 5em auto;
 }
-#search-div,#new-coffee-div {
-    margin: 2em;
-}
-#coffee {
+.coffee-list {
     display: flex;
     margin: auto;
-    flex-direction: column;
     flex-wrap: wrap;
-    width: 40%;
-    height: 40em;
+    flex-direction: column;
+    width: 50%;
+    height: 30em;
+
 }
-#coffee p, #coffee h2 {
+.coffee-list p, .coffee-list h2 {
     margin: 0;
     padding: 0;
 }
 
 .coffee-wrapper {
-    margin: 10em;
+ margin: 1.5em 3em;
+}
+.input-forms, .submit-button {
+  padding: .5em;
+}
+select {
+    -o-appearance: none;
+    -ms-appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    text-align: center;
+    padding: 0 1em
 }

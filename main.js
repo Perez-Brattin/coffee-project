@@ -25,7 +25,7 @@
     const addButton = document.querySelector('#new-selection');
 
     function renderCoffee(coffee) {
-        var html = `<div class "coffee-wrapper><h2>${coffee.name}</h2>`;
+        var html = `<div class="coffee-wrapper"><h2>${coffee.name}</h2>`;
         html += `<p>${coffee.roast}</p></div>`;
         return html;
     }
@@ -50,11 +50,11 @@
 
 
     function filterByName(value) {
-        return coffees.filter(({ name }) => name.toLowerCase().startsWith(value))
+        return coffees.filter(({ name }) => name.toLowerCase().startsWith(value));
     }
 
     function searchQuery(e) {
-        coffeeDiv.innerHTML = renderCoffees(filterByName(e.target.value.toLowerCase()))
+        coffeeDiv.innerHTML = renderCoffees(filterByName(e.target.value.toLowerCase()));
     }
 
 
@@ -68,11 +68,11 @@
 
     function addNewCoffee(e) {
         e.preventDefault();
-        const newCoffeeName = document.querySelector('#new-coffee')
-        const newCoffeeRoast = document.querySelector('#new-roast')
+        const newCoffeeName = document.querySelector('#new-coffee');
+        const newCoffeeRoast = document.querySelector('#new-roast');
         if (newCoffeeName) {
-            coffees.push(createNewCoffee(newCoffeeName.value, newCoffeeRoast.value))
-            coffeeDiv.innerHTML = renderCoffees(coffees)
+            coffees.push(createNewCoffee(newCoffeeName.value, newCoffeeRoast.value));
+            coffeeDiv.innerHTML = renderCoffees(coffees);
             newCoffeeName.value = "";
             newCoffeeRoast.value = "light";
         }
@@ -84,8 +84,8 @@
 
     coffeeDiv.innerHTML = renderCoffees(coffees);
     submitButton.addEventListener('click', updateCoffees);
-    search.addEventListener('keyup', searchQuery)
-    addButton.addEventListener('click', addNewCoffee)
+    search.addEventListener('keyup', searchQuery);
+    addButton.addEventListener('click', addNewCoffee);
 
 
 })();

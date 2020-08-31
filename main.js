@@ -25,8 +25,8 @@
     const addButton = document.querySelector('#new-selection');
 
     function renderCoffee(coffee) {
-        var html = `<h2>${coffee.name}</h2>`;
-        html += `<p>${coffee.roast}</p>`;
+        var html = `<div class "coffee-wrapper><h2>${coffee.name}</h2>`;
+        html += `<p>${coffee.roast}</p></div>`;
         return html;
     }
 

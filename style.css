@@ -1,3 +1,10 @@
+html {
+    box-sizing: border-box;
+}
+*,*::before,*::after {
+    box-sizing: inherit;
+}
+
 table {
     border-collapse: collapse;
     margin: 15px 0;
@@ -6,4 +13,34 @@ table {
 td, th {
     border: 1px solid black;
     padding: 5px 10px;
+}
+
+body {
+    /*background-image: url("images/beans.jpeg");*/
+    display: flex;
+    flex-direction: column;
+}
+
+.form-wrapper {
+    margin: 5em auto;
+    display: flex;
+}
+#search-div,#new-coffee-div {
+    margin: 2em;
+}
+#coffee {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 40%;
+    height: 40em;
+}
+#coffee p, #coffee h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.coffee-wrapper {
+    margin: 10em;
 }

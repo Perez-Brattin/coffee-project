@@ -24,6 +24,7 @@
     const search = document.querySelector('#search-coffees');
     const addButton = document.querySelector('#new-selection');
 
+
     function renderCoffee(coffee) {
         var html = `<div class="coffee-wrapper"><h2>${coffee.name}</h2>`;
         html += `<p>${coffee.roast}</p></div>`;
@@ -76,6 +77,8 @@
             newCoffeeName.value = "";
             newCoffeeRoast.value = "light";
         }
+        localStorage.setItem('MyCoffeeList', JSON.stringify(coffees))
+        JSON.parse(localStorage.getItem('coffees'))
     }
 
 
@@ -85,7 +88,9 @@
     coffeeDiv.innerHTML = renderCoffees(coffees);
     submitButton.addEventListener('click', updateCoffees);
     search.addEventListener('keyup', searchQuery);
-    addButton.addEventListener('click', addNewCoffee);
+    document.addEventListener('DOMContentLoaded', () => {
+        addButton.addEventListener('click', addNewCoffee);
+    })
 
 
 })();

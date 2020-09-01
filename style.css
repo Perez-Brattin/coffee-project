@@ -7,71 +7,46 @@ html {
 
 body {
     /* background-image: url("images/beans.jpeg"); */
-    
     margin: 0;
     padding: 0;
 }
-.main-header {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 0 -200px;
-    height: 15em;
-    width: 100%;
-    display: grid;
-    grid-template-rows: repeat(5, 1fr);
-    grid-template-columns: repeat(4, 1fr);
-}
-.title-card {
-    grid-column: 2/3;
-    grid-row: 2/4;
-    text-align: center;
-}
-.title-card h1 {
-    font-weight: 500;
-    font-size: 2.5em;
-}
+.main-nav {
+    margin:auto;
+    width: 60%;
 
-.title-card p,
-.title-card h1 {
-    margin: 0;
-    color: black;
+
 }
-.main-nav{
-    background: rgba(0, 0, 0, 0.4);
-    width: 100%;
-    grid-column: 1/5;
-    grid-row: 5/6;
-}
-.main-nav ul{
+.nav-list{
     display: flex;
-    justify-content: flex-end;
-    padding: 0;
-    margin: 0;
+    justify-content: space-evenly;
 }
-
-ul li {
+.nav-item {
     list-style: none;
+    margin: 2.5em;
 }
-
-li a {
-    display: inline-block;
-    padding: 1em 2em;
-    color: white;
+.nav-link {
     text-decoration: none;
+    color: black;
+    padding: 1em;
 }
-
-.form-header {
-    margin: 0; 
-    padding: 0;
+.logo {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    right: 817px;
 }
 .main-wrapper {
     display: flex;
-    flex-direction: column;
-
 }
 .field-container {
     display: flex;
+    flex-direction: column;
     margin: 5em auto;
+}
+.form-container{
+    display:flex;
+    flex-direction: column;
 }
 .coffee-list {
     display: flex;
@@ -90,8 +65,16 @@ li a {
 .coffee-wrapper {
  margin: 1.5em 3em;
 }
+.form-header {
+    text-align: center;
+}
+.form-label{
+    margin-left: 1em;
+}
 .input-forms, .submit-button {
-  padding: .5em;
+  padding: .5em 8em;
+  text-align: center;
+  margin: 1em;
 }
 select {
     -o-appearance: none;
@@ -106,7 +89,3 @@ select {
 
 /*video Css*/
 
-#videobg {
-    background: url(video/pour.mp4) no-repeat;
-    background-size: cover;
-}

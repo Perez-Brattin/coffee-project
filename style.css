@@ -6,13 +6,17 @@ html {
 }
 
 body {
-    /* background-image: url("images/beans.jpeg"); */
     margin: 0;
     padding: 0;
+    background-image: url("images/coffee-dark.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 .main-nav {
     margin:auto;
     width: 60%;
+    /*background: rgb(229,171,36);*/
 
 
 }
@@ -43,6 +47,7 @@ body {
     display: flex;
     flex-direction: column;
     margin: 5em auto;
+    background: rgb(229,171,36);
 }
 .form-container{
     display:flex;
@@ -55,6 +60,7 @@ body {
     flex-direction: column;
     width: 50%;
     height: 30em;
+    background: rgb(229,171,36);
 
 }
 .coffee-list p, .coffee-list h2 {

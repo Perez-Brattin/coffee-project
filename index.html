@@ -6,27 +6,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="main-header">
-        <video width="1280" height="720" autoplay muted loop poster="video.jpg" id="videobg">
-            <source src="video/pour.mp4" type="video/mp4">
-            <source src="video/pour.mp4.webm" type="video/webm">
-            <source src="video/pour.mp4.ogg" type="video/ogg">
-        </video>
-    <nav class="main-nav">
-        <ul>
-            <li><a href="#">home</a></li>
-            <li><a href="#">locations</a></li>
-            <li><a href="#">contact</a></li>
-            <li><a href="#">about us</a></li>
-        </ul>
-    </nav>
-    </header>
-
+<nav class="main-nav">
+    <ul class="nav-list">
+        <li class="nav-item"><a class="nav-link" href="#">home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">gallery</a></li>
+        <li class="nav-item"><a href=""><img class="logo" src="images/io-grind.png" alt="company logo"></a></li>
+        <li class="nav-item"><a class="nav-link" href="#">blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">about us</a></li>
+    </ul>
+</nav>
 <main class="main-wrapper">
 <div class="field-container">
 <h1 class="form-header">Coffee!</h1>
     <form class="form-container">
-        <label for="roast-selection">Roast</label>
+        <label class="form-label" for="roast-selection">Roast</label>
         <select class="input-forms" id="roast-selection">
             <option>all</option>
             <option>light</option>
@@ -34,7 +27,7 @@
             <option>dark</option>
         </select>
 
-        <label for="search-coffees">Coffee Name</label>
+        <label class="form-label" for="search-coffees">Coffee Name</label class="form-label">
         <input class="input-forms" id="search-coffees" type="text" placeholder="Search Coffees">
 
         <button class="submit-button" id="submit" type="submit">Submit</button>
@@ -42,15 +35,15 @@
 
 
     <h1 class="form-header">Add a Coffee</h1>
-    <form class="form container">
-        <label for="new-roast">Roast</label>
+    <form class="form-container">
+        <label class="form-label" for="new-roast">Roast</label class="form-label">
         <select class="input-forms" id="new-roast">
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
         </select>
 
-        <label for="new-coffee">Coffee Name</label>
+        <label class="form-label" for="new-coffee">Coffee Name</label class="form-label">
         <input class="input-forms" id="new-coffee" type="search" placeholder="Add New Coffee">
         
         <button class="submit-button" id="new-selection" type="submit">Submit</button>

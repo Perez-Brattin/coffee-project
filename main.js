@@ -25,14 +25,26 @@
     const addButton = document.querySelector('#new-selection');
 
     function renderCoffee(coffee) {
-        var html = `<div class="coffee-wrapper"><h2>${coffee.name}</h2>`;
-        html += `<p>${coffee.roast}</p></div>`;
-        return html;
+        const {name, price, roast} = coffee
+        return `
+            <article class="coffee-card br2 ba dark-gray b--black-10 ma4 w-100 w-50-m w-25-l mw5 center bg-white">
+                <img src="http://placekitten.com/g/600/300" class="db w-100 br2 br--top" alt="Photo of a kitten looking menacing.">
+                <div class="pa2 ph3-ns pb3-ns">
+                    <div class="dt w-100 mt1">
+                        <h1 class="f5 f4-ns mv0">${name}</h1>
+                        <h2 class="f5 mv0">${roast}</h2>
+                        <p class="f6 lh-copy measure mt2 mid-gray">$${price}</p>
+                    </div>
+                </div>
+            </article>
+        `
+    
+
     }
 
-    function renderCoffees(coffees) {
+    function renderCoffees(_coffees) {
         var html = '';
-        coffees.forEach((coffee) => {
+        _coffees.forEach((coffee) => {
             html += renderCoffee(coffee)
         })
         return html;

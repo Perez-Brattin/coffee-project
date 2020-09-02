@@ -24,7 +24,6 @@
     const search = document.querySelector('#search-coffees');
     const addButton = document.querySelector('#new-selection');
 
-
     function renderCoffee(coffee) {
         var html = `<div class="coffee-wrapper"><h2>${coffee.name}</h2>`;
         html += `<p>${coffee.roast}</p></div>`;
@@ -71,14 +70,12 @@
         e.preventDefault();
         const newCoffeeName = document.querySelector('#new-coffee');
         const newCoffeeRoast = document.querySelector('#new-roast');
-        if (newCoffeeName) {
+        if (newCoffeeName.value) {
             coffees.push(createNewCoffee(newCoffeeName.value, newCoffeeRoast.value));
             coffeeDiv.innerHTML = renderCoffees(coffees);
             newCoffeeName.value = "";
             newCoffeeRoast.value = "light";
         }
-        localStorage.setItem('MyCoffeeList', JSON.stringify(coffees))
-        JSON.parse(localStorage.getItem('coffees'))
     }
 
 
@@ -88,9 +85,7 @@
     coffeeDiv.innerHTML = renderCoffees(coffees);
     submitButton.addEventListener('click', updateCoffees);
     search.addEventListener('keyup', searchQuery);
-    document.addEventListener('DOMContentLoaded', () => {
-        addButton.addEventListener('click', addNewCoffee);
-    })
+    addButton.addEventListener('click', addNewCoffee);
 
 
 })();

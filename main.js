@@ -70,11 +70,12 @@
     }
 
 
-    function createNewCoffee(name, roast) {
+    function createNewCoffee(name, roast, price) {
         return {
             id: coffees.length + 1,
             name: name,
-            roast: roast
+            roast: roast,
+            price: price
         };
     }
 
@@ -82,9 +83,11 @@
         e.preventDefault();
         const newCoffeeName = document.querySelector('#new-coffee');
         const newCoffeeRoast = document.querySelector('#new-roast');
+        const newCoffeePrice = document.querySelector('#price')
         if (newCoffeeName.value) {
-            coffees.push(createNewCoffee(newCoffeeName.value, newCoffeeRoast.value));
+            coffees.push(createNewCoffee(newCoffeeName.value, newCoffeeRoast.value, newCoffeePrice.value));
             coffeeDiv.innerHTML = renderCoffees(coffees);
+            newCoffeePrice.value = "";
             newCoffeeName.value = "";
             newCoffeeRoast.value = "light";
         }

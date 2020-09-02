@@ -1,57 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>IO Grind Co.</title>
-    <link rel="stylesheet" href="style.css">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<title>IO Grind Coffee & Bakery</title>
+	<!-- Google Fonts -->
+	<link
+		href="https://fonts.googleapis.com/css?family=Cookie%7cMontserrat:300,400,500,600,700%7cRoboto:300,400,500,700"
+		rel="stylesheet">
+	<!-- Font Awesome -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+		integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"/>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<nav class="main-nav">
-    <ul class="nav-list">
-        <li class="nav-item"><a class="nav-link" href="#">home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">gallery</a></li>
-        <li class="nav-item"><a href=""><img class="logo" src="images/io-grind.png" alt="company logo"></a></li>
-        <li class="nav-item"><a class="nav-link" href="#">blog</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">about us</a></li>
-    </ul>
-</nav>
-<main class="main-wrapper">
-<div class="field-container">
-<h1 class="form-header">Browse Selections</h1>
-    <form class="form-container">
-        <label class="form-label" for="roast-selection">Roast</label>
-        <select class="input-forms" id="roast-selection">
-            <option>all</option>
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-
-        <label class="form-label" for="search-coffees">Coffee Name</label class="form-label">
-        <input class="input-forms" id="search-coffees" type="text" placeholder="Search Coffees">
-
-        <button class="submit-button" id="submit" type="submit">Submit</button>
-    </form>
-
-
-    <h1 class="form-header">Add a Coffee</h1>
-    <form class="form-container">
-        <label class="form-label" for="new-roast">Roast</label class="form-label">
-        <select class="input-forms" id="new-roast">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-
-        <label class="form-label" for="new-coffee">Coffee Name</label class="form-label">
-        <input class="input-forms" id="new-coffee" type="search" placeholder="Add New Coffee">
-        
-        <button class="submit-button" id="new-selection" type="submit">Submit</button>
-    </form>
-</div>
-
-    <div id="coffee" class="coffee-list"></div>
-</main>
+    <main class="bg-light-blue"> 	
+		<header class="bg-transparent black-80 tc pv4">
+			<img class="br-100 ba h4 w4 dib bg-silver" src="/images/IO-grind_logo.png" alt="">
+			<nav class="bt bb tc mw8 center mt4" aria-label="nav">
+				<a href="#" class="f6 f5-l link bg-animate black-80 dib pa3 ph4-l hover-bg-lightest-blue">home</a>
+				<a href="#" class="f6 f5-l link bg-animate black-80 dib pa3 ph4-l hover-bg-light-green">blends</a>
+				<a href="#" class="f6 f5-l link bg-animate black-80 dib pa3 ph4-l hover-bg-light-blue">shop</a>
+				<a href="#" class="f6 f5-l link bg-animate black-80 dib pa3 ph4-l hover-bg-light-yellow">contact us</a>
+			</nav>
+		</header>
+		<section class="pv4 flex flex-row w-90 center justify-between">
+			<div id="coffee" class="w-70 pa3 flex flex-wrap justify-between mr3"></div>
+			<aside class="w-30">
+				<section>
+					<h3 class="b ttu db mb2 tc">Browse Selections</h3>
+					<label class="f4 b tl db mv2" for="roast-selection">Roast</label>
+					<select class="input-reset ba2 ba db w-100 pa2" id="roast-selection">
+						<option>all</option>
+						<option>light</option>
+						<option>medium</option>
+						<option>dark</option>
+					</select>
+				
+					<label class="f4 b tl db mv2" for="search-coffees">Coffee Name</label>
+					<input class="input-reset ba2 ba db w-100 pa2" id="search-coffees" type="text" placeholder="Search Coffees">
+				
+					<button class="f5 pointer dim br2 ph3 pv2 mt3 db w-100 white bg-navy" id="submit" type="submit">Submit</button>
+				</section>
+				<hr>
+				<section>
+					<h3 class="b ttu db mb2 tc">Add a Coffee</h3>
+					<label class="f4 b tl db mv2" for="new-roast">Roast</label>
+					<select class="input-reset ba2 ba db w-100 pa2" class="input-reset" id="new-roast">
+						<option>light</option>
+						<option>medium</option>
+						<option>dark</option>
+					</select>
+					
+					<label class="f4 b tl db mv2" for="new-coffee">Coffee Name</label>
+					<input  class="input-reset ba2 ba db w-100 pa2" id="new-coffee" type="search" placeholder="Add New Coffee">
+					
+					<button class="f5 pointer dim br2 ph3 pv2 mt3 db w-100 white bg-navy" id="new-selection" type="submit">Submit</button>
+				</section>
+			</aside>
+		</section>
+	</main>
+	<footer class="pv3 bg-silver">
+		<div class="tc mw8 center mt1">
+			<p class="ma0">IO Grind</p>
+		</div>
+	</footer>
 
     <script src="main.js"></script>
 </body>

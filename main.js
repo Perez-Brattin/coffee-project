@@ -38,13 +38,18 @@
                 </div>
             </article>
         `
-    
+    }
 
+    function sortCoffeeName() {
+        coffees.sort(function(a,b) {
+            return a.name.localeCompare(b.name);
+        })
+            return coffees
     }
 
     function renderCoffees(_coffees) {
         var html = '';
-        _coffees.forEach((coffee) => {
+        sortCoffeeName().forEach((coffee) => {
             html += renderCoffee(coffee)
         })
         return html;

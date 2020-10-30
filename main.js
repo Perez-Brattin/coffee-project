@@ -40,16 +40,15 @@
         `
     }
 
-    function sortCoffeeName() {
-        coffees.sort(function(a,b) {
+    function sortCoffeeName(_coffees) {
+        return _coffees.sort(function(a,b) {
             return a.name.localeCompare(b.name);
         })
-            return coffees
     }
 
     function renderCoffees(_coffees) {
         var html = '';
-        sortCoffeeName().forEach((coffee) => {
+        sortCoffeeName(_coffees).forEach((coffee) => {
             html += renderCoffee(coffee)
         })
         return html;
